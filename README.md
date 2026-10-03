@@ -2,7 +2,9 @@
 
 一份可从 MNIST 快速起步、再替换为自己研究任务的训练骨架。Hydra 负责组合模型、数据、日志、回调和 Trainer 配置；Lightning 负责训练/验证/测试与 checkpoint；W&B 默认离线记录。`code/utils/` 保留数据加载、进度和 W&B 等可复用工具，今后可直接在其中扩展。
 
-本模板基于 [zerebom/hydra-pl-wandb-sample-project](https://github.com/zerebom/hydra-pl-wandb-sample-project) 的项目结构和本地迭代而来；当前仅作为私人研究模板。公开分发前请先核对上游授权。
+这是公开的通用项目模板。可在 GitHub 仓库页面点击 **Use this template → Create a new repository**，为自己的科研项目创建独立仓库，并自行选择新仓库的公开或私有状态。模板更新不会自动覆盖你的项目。
+
+本模板基于 [zerebom/hydra-pl-wandb-sample-project](https://github.com/zerebom/hydra-pl-wandb-sample-project) 的项目结构，经本地迭代整理了训练代码、MNIST 示例和可复用工具。
 
 本模板**不绑定任何主机、NFS 路径、SSH 地址或网卡**。默认使用本机单设备；原仓库的三机四卡脚本不在这里。MNIST + ResNet-18 是流水线示例，不是科研模型必须遵循的结构。
 
