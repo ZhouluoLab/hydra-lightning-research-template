@@ -1,0 +1,21 @@
+# @package callbacks
+StableProgressBar:
+  _target_: utils.progress.StableProgressBar
+
+EpochMetricsPrinter:
+  _target_: utils.progress.EpochMetricsPrinter
+
+EarlyStopping:
+  _target_: pytorch_lightning.callbacks.EarlyStopping
+  monitor: ${trainer.metric}
+  patience: 5
+  mode: ${trainer.mode}
+
+ModelCheckpoint:
+  _target_: pytorch_lightning.callbacks.ModelCheckpoint
+  monitor: ${trainer.metric}
+  save_top_k: 2
+  save_last: true
+  dirpath: checkpoints
+  filename: '{epoch}-{step}'
+  mode: ${trainer.mode}

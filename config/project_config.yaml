@@ -1,0 +1,24 @@
+# 自己的科研项目入口：先复用 ResNet18 + MNIST，再选自己的 model/data 配置。
+defaults:
+  - model: resnet18
+  - data: default_data
+  - logger: wandb_offline
+  - callbacks: default_callbacks
+  - trainer: default_trainer
+  - _self_
+
+project: my-research-project
+name: mnist-resnet18-baseline
+tags: [mnist, resnet18]
+seed: 42
+run_test: true
+
+tracking:
+  log_config: true
+  watch_model: false
+
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: true

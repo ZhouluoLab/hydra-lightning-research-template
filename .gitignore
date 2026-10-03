@@ -1,0 +1,29 @@
+# Training inputs and generated outputs
+/data/
+/outputs/
+/wandb/
+/lightning_logs/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Secrets and local environments
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.venv/
+venv/
+
+# Python / tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.serena/
+.ua/
+.understand-anything/
+.DS_Store

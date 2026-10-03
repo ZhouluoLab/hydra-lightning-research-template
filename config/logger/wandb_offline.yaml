@@ -1,0 +1,7 @@
+# @package logger
+_target_: pytorch_lightning.loggers.WandbLogger
+project: ${project}
+name: ${name}
+tags: ${tags}
+offline: true
+log_model: false

@@ -1,0 +1,4 @@
+# @package model
+_target_: networks.resnet18.LitResNet18
+num_classes: 10
+learning_rate: 1e-3

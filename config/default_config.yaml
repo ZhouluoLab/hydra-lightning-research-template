@@ -1,0 +1,23 @@
+defaults:
+  - model: resnet18
+  - logger: wandb_offline
+  - callbacks: default_callbacks
+  - data: default_data
+  - trainer: default_trainer
+  - _self_
+
+project: sample-project
+name: mnist-resnet18-full
+seed: 42
+run_test: true
+tags: [example, mnist, resnet18]
+
+tracking:
+  log_config: true
+  watch_model: false
+
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: true

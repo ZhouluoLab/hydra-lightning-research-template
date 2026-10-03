@@ -1,0 +1,10 @@
+# @package data
+_target_: utils.mnist.MNISTDataModule
+data_dir: data/mnist
+batch_size: 64
+train_samples: null
+val_samples: null
+test_samples: null
+image_size: 32
+split_seed: 42
+num_workers: 4
